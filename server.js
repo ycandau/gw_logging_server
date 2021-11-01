@@ -16,6 +16,8 @@ app.use(morgan('dev'));
 // Parse the body
 app.use(express.json({ extended: false }));
 
+const db = require('./database/db');
+
 // Router
 const router = require('./routes/api')();
 app.use('/api', router);
