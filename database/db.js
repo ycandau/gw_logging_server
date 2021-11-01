@@ -26,11 +26,11 @@ const reset = async () => {
 };
 
 // Query: Select all logs
-const getLogs = async () => {
+const browseLogs = async () => {
   return await db.query('SELECT * FROM logs;');
 };
 
-// Query: Add a log
+// Query: Insert a new log
 const addLog = async (log) => {
   const [columns, placeholders, params] = insertParams(log);
   return await db.query(
@@ -56,12 +56,4 @@ const insertParams = (obj) => {
 
 //------------------------------------------------------------------------------
 
-module.exports = { db, reset, getLogs, addLog };
-
-// const obj = {
-//   method: 'POST',
-//   url: '/api/insert',
-//   ip: '000',
-//   data: 'zoo',
-//   date: '2021-11-01',
-// };
+module.exports = { db, reset, browseLogs, addLog };
