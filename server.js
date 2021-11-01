@@ -2,7 +2,7 @@
 // server.js
 //------------------------------------------------------------------------------
 
-require('dotenv').config();
+require('./src/environment');
 const PORT = process.env.PORT || 8000;
 
 // Create and initialize the server
@@ -16,10 +16,11 @@ app.use(morgan('dev'));
 // Parse the body
 app.use(express.json({ extended: false }));
 
+// Database
 const db = require('./database/db');
 
 // Router
-const router = require('./routes/api')();
+const router = require('./routes/api')(db);
 app.use('/api', router);
 
 //----------------------------------------------------------------------------

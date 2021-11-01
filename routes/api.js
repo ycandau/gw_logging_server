@@ -7,7 +7,7 @@ const router = express.Router();
 
 module.exports = (db) => {
   router.get('/', async (_, res) => {
-    const data = { method: 'get', action: '/' };
+    const data = await db.getLogs();
     res.json(data);
   });
 
