@@ -5,5 +5,8 @@
   "repository": "git@github.com:ycandau/gw_logging_server.git",
   "author": "Yves Candau <ycandau@gmail.com>",
   "license": "MPL-2.0",
-  "private": true
+  "private": true,
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
