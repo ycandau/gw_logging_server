@@ -6,5 +6,5 @@ CREATE TABLE logs (
   url VARCHAR(255) NOT NULL,
   ip VARCHAR(255) NOT NULL,
   data VARCHAR(255) NOT NULL,
-  date_created DATE NOT NULL
+  date DATE NOT NULL
 );
