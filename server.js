@@ -16,6 +16,9 @@ app.use(morgan('dev'));
 // Parse the body
 app.use(express.json({ extended: false }));
 
+const cors = require('cors');
+app.use(cors());
+
 // Database
 const db = require('./database/db');
 
